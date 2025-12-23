@@ -95,11 +95,10 @@ app.patch('/api/messages/:id', (req, res) => {
     });
 });
 
-app.get(/.*/, (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(REACT_BUILD_PATH, 'index.html'));
 });
 
 app.listen(PORT, () => {
     console.log(`Сервер запущен на http://localhost:${PORT}`);
 });
-
